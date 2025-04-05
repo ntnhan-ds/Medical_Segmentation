@@ -16,7 +16,6 @@ async def load_model_local():
     
     return model
 
-
 def set_model(new_model):
     global model
     model = new_model
