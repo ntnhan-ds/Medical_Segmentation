@@ -12,7 +12,7 @@ async def initialize_resources():
     try:
         start=time.time()
         print("Loading model ...")
-        model=await model_store.load_model_local()
+        model=await model_store.load_or_download_model()
         model_store.set_model(model)
         print(f"Model loaded in {time.time() - start:.2f} seconds.")
         
