@@ -1,11 +1,10 @@
-from bm25s.hf import BM25HF
 from tensorflow.keras.models import load_model
 from huggingface_hub import login, hf_hub_download
-from dotenv import load_env
+from dotenv import load_dotenv
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
-load_env()
+load_dotenv()
 MODEL_REPO=os.getenv("path_model_dcunet")
 ACCESS_TOKEN_HF=os.getenv("access_token_read")
 
